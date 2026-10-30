@@ -1,0 +1,35 @@
+{
+  "name": "sales-assistant",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start -p ${PORT:-3000}",
+    "migrate": "tsx --env-file=.env.local scripts/migrate.ts",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.32.1",
+    "imapflow": "^1.0.171",
+    "luxon": "^3.5.0",
+    "mailparser": "^3.7.1",
+    "next": "^14.2.35",
+    "nodemailer": "^6.9.16",
+    "pg": "^8.13.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "devDependencies": {
+    "@types/luxon": "^3.4.2",
+    "@types/mailparser": "^3.4.5",
+    "@types/node": "^22.7.5",
+    "@types/nodemailer": "^6.4.16",
+    "@types/pg": "^8.11.10",
+    "@types/react": "^18.3.11",
+    "@types/react-dom": "^18.3.0",
+    "tsx": "^4.19.1",
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.3"
+  }
+}

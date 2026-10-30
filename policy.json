@@ -1,0 +1,33 @@
+{
+  "company": "Northbeam Analytics",
+  "timezone": "Asia/Kolkata",
+  "workingHours": { "days": [1, 2, 3, 4, 5], "start": "10:00", "end": "17:00" },
+  "slotMinutes": 30,
+  "minNoticeHours": 4,
+  "horizonDays": 7,
+  "maxOffered": 3,
+  "services": [
+    { "id": "dashboarding", "name": "Dashboard and BI build" },
+    { "id": "data_audit", "name": "Data quality audit" },
+    { "id": "forecasting", "name": "Demand forecasting" },
+    { "id": "marketing_analytics", "name": "Marketing analytics" }
+  ],
+  "qualifying": {
+    "minBudgetUsd": 8000,
+    "requiredFields": ["service", "company", "budgetUsd", "timeline"]
+  },
+  "reps": [
+    {
+      "id": "asha",
+      "name": "Asha Verma",
+      "services": ["dashboarding", "data_audit"],
+      "calendarEnv": "CALENDAR_ID_ASHA"
+    },
+    {
+      "id": "rohan",
+      "name": "Rohan Mehta",
+      "services": ["forecasting", "marketing_analytics"],
+      "calendarEnv": "CALENDAR_ID_ROHAN"
+    }
+  ]
+}
