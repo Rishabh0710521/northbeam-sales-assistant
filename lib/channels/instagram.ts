@@ -29,8 +29,14 @@ export function parseInstagram(payload: any): InboundMessage[] {
 }
 
 export async function sendInstagram(recipientId: string, text: string) {
-  await metaPost("instagram", "https://graph.instagram.com/v21.0/me/messages", process.env.INSTAGRAM_ACCESS_TOKEN, {
-    recipient: { id: recipientId },
-    message: { text }
-  });
+  const igAccountId = process.env.INSTAGRAM_ACCOUNT_ID ?? "17841445439651104";
+  await metaPost(
+    "instagram",
+    `https://graph.facebook.com/v21.0/${igAccountId}/messages`,
+    process.env.INSTAGRAM_ACCESS_TOKEN,
+    {
+      recipient: { id: recipientId },
+      message: { text }
+    }
+  );
 }
