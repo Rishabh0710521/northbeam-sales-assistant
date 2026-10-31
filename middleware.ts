@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 
 export function middleware(request: NextRequest) {
   const path = request.nextUrl.pathname;
-  if (path.startsWith("/api/webhooks")) return NextResponse.next();
+  if (path.startsWith("/api/webhooks") || path === "/privacy") return NextResponse.next();
 
   const cron = request.headers.get("x-cron-secret");
   if (cron && cron === process.env.CRON_SECRET) return NextResponse.next();
